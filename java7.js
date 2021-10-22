@@ -10,26 +10,26 @@ const forEachObj ={
         
 
         console.assert(
-            this.forEach(this.arrays[0], this.callback) === '4, 6, 8, 10, 18, 46, 112, 0',{
+            JSON.stringify(this.forEach(this.arrays[0], this.callback)) === JSON.stringify([4, 6, 8, 10, 18, 46, 112, 0]),{
                 'funcao' : 'forEach0',
-                'expected' : '4, 6, 8, 10, 18, 46, 112, 0',
-                'result' : this.arrays[0]
+                'expected' : JSON.stringify([4, 6, 8, 10, 18, 46, 112, 0]),
+                'result' :JSON.stringify( this.arrays[0])
             }
         )
 
         console.assert(
-            this.forEach(this.arrays[1], this.callback) === [178, 4, 12, 16, 10, 126, 90, 18, 6],{
+            JSON.stringify(this.forEach(this.arrays[1], this.callback)) === JSON.stringify([178, 4, 12, 16, 10, 126, 90, 18, 6]),{
                 'funcao' : 'forEach1',
-                'expected' : [178, 4, 12, 16, 10, 126, 90, 18, 6],
-                'result' : this.arrays[1] 
+                'expected' : JSON.stringify([178, 4, 12, 16, 10, 126, 90, 18, 6]),
+                'result' : JSON.stringify(this.arrays[1]) 
             }
         )
 
         console.assert(
-            this.forEach(this.arrays[2], this.callback) === [106, 16, 66, 0, 150, 96, 2, 36, 184],{
+            JSON.stringify(this.forEach(this.arrays[2], this.callback)) ===JSON.stringify( [106, 16, 66, 0, 150, 96, 2, 36, 184]),{
                 'funcao' : 'forEach2',
-                'expected' :[106, 16, 66, 0, 150, 96, 2, 36, 184],
-                'result' : this.arrays[2]
+                'expected' :JSON.stringify([106, 16, 66, 0, 150, 96, 2, 36, 184]),
+                'result' : JSON.stringify(this.arrays[2])
             }
         )
     },
@@ -64,26 +64,26 @@ const mapObj ={
     teste : function testeMap(){
         
         console.assert(
-            this.map(this.arrays[0], this.callback) === [50, 30, 14, 60, 79, 18, 17, 69, 95],{
+            JSON.stringify(this.map(this.arrays[0], this.callback)) === JSON.stringify([50, 30, 14, 60, 79, 18, 17, 69, 95]),{
                 'funcao' : 'map0',
-                'expected' : [50, 30, 14, 60, 79, 18, 17, 69, 95],
-                'result' : this.map(this.arrays[0], this.callback)
+                'expected' : JSON.stringify([50, 30, 14, 60, 79, 18, 17, 69, 95]),
+                'result' : JSON.stringify(this.map(this.arrays[0], this.callback))
             }
         )
 
         console.assert(
-            this.map(this.arrays[1], this.callback) === [62, 21, 29, 103, 40, 206, 70, 39, 7],{
+            JSON.stringify(this.map(this.arrays[1], this.callback)) === JSON.stringify([62, 21, 29, 103, 40, 206, 70, 39, 7]),{
                 'funcao' : 'map1',
-                'expected' : [62, 21, 29, 103, 40, 206, 70, 39, 7],
-                'result' : this.map(this.arrays[1], this.callback) 
+                'expected' : JSON.stringify([62, 21, 29, 103, 40, 206, 70, 39, 7]),
+                'result' : JSON.stringify(this.map(this.arrays[1], this.callback)) 
             }
         )
 
         console.assert(
-            this.map(this.arrays[2], this.callback) === [13, 35, 10, 40, 73, 101, 246, 347],{
+            JSON.stringify(this.map(this.arrays[2], this.callback)) === JSON.stringify([13, 35, 10, 40, 73, 101, 246, 347]),{
                 'funcao' : 'map2',
-                'expected' :[13, 35, 10, 40, 73, 101, 246, 347],
-                'result' : this.map(this.arrays[2], this.callback)
+                'expected' :JSON.stringify([13, 35, 10, 40, 73, 101, 246, 347]),
+                'result' :JSON.stringify( this.map(this.arrays[2], this.callback))
             }
         )
     },
@@ -119,26 +119,26 @@ const filterObj ={
     teste : function testeFilter(){
         
         console.assert(
-            this.filter(this.arrays[0], this.callback) === [56,852,254],{
+            JSON.stringify(this.filter(this.arrays[0], this.callback)) === JSON.stringify([56,852,254]),{
                 'funcao' : 'filter0',
-                'expected' : [56,852,254],
-                'result' : this.filter(this.arrays[0], this.callback)
+                'expected' : JSON.stringify([56,852,254]),
+                'result' : JSON.stringify(this.filter(this.arrays[0], this.callback))
             }
         )
 
         console.assert(
-            this.filter(this.arrays[1], this.callback) === [8,64,4,50,64],{
+            JSON.stringify(this.filter(this.arrays[1], this.callback)) === JSON.stringify([8,64,4,50,64]),{
                 'funcao' : 'filter1',
-                'expected' : [8,64,4,50,64],
-                'result' : this.filter(this.arrays[1], this.callback) 
+                'expected' : JSON.stringify([8,64,4,50,64]),
+                'result' : JSON.stringify(this.filter(this.arrays[1], this.callback)) 
             }
         )
 
         console.assert(
-            this.filter(this.arrays[2], this.callback) === [4],{
+            JSON.stringify(this.filter(this.arrays[2], this.callback)) === JSON.stringify([4]),{
                 'funcao' : 'filter2',
-                'expected' :[4],
-                'result' : this.filter(this.arrays[2], this.callback)
+                'expected' :JSON.stringify([4]),
+                'result' : JSON.stringify(this.filter(this.arrays[2], this.callback))
             }
         )
     },
@@ -180,26 +180,26 @@ const findObj ={
     teste : function testeFind(){
         
         console.assert(
-            this.find(this.arrays[0], this.callback) === [56],{
+            JSON.stringify(this.find(this.arrays[0], this.callback)) === JSON.stringify([56]),{
                 'funcao' : 'find0',
-                'expected' : [56],
-                'result' : this.find(this.arrays[0], this.callback)
+                'expected' : JSON.stringify([56]),
+                'result' : JSON.stringify(this.find(this.arrays[0], this.callback))
             }
         )
 
         console.assert(
-            this.find(this.arrays[1], this.callback) === [8],{
+            JSON.stringify(this.find(this.arrays[1], this.callback)) === JSON.stringify([8]),{
                 'funcao' : 'find1',
-                'expected' : [8],
-                'result' : this.find(this.arrays[1], this.callback) 
+                'expected' : JSON.stringify([8]),
+                'result' : JSON.stringify(this.find(this.arrays[1], this.callback) )
             }
         )
 
         console.assert(
-            this.find(this.arrays[2], this.callback) === [4],{
+            JSON.stringify(this.find(this.arrays[2], this.callback)) === JSON.stringify([4]),{
                 'funcao' : 'find2',
-                'expected' :[4],
-                'result' : this.find(this.arrays[2], this.callback)
+                'expected' :JSON.stringify([4]),
+                'result' : JSON.stringify(this.find(this.arrays[2], this.callback))
             }
         )
     },
@@ -494,9 +494,6 @@ const everyObj ={
     everyObj.teste()
 
     //FILL
-//valor para preencher a array
-//indice de inicio
-//indice final
 
     const fillObj ={
 
@@ -605,7 +602,7 @@ const includesObj ={
     },
 
 
-    includes : function replacement(array,value){
+    includes : function isItPresent(array,value){
         result = false;
 
         for(let i = 0; i < array.length; i++){
@@ -621,49 +618,158 @@ const includesObj ={
 
 //INDEXOF
 
-const includesObj ={
+const indexOfObj ={
 
     arrays : [[87,413,65,99,27],
               [2,44,26,54,58,92],
               [3,7,15,29,57,21]],
 
-    teste : function testeIncludes(){
+    teste : function testeIndexOf(){
         
         console.assert(
-            this.includes(this.arrays[0], 99) === 3,{
-                'funcao' : 'includes0',
+            this.indexOf(this.arrays[0], 99) === 3,{
+                'funcao' : 'indexOf0',
                 'expected' : 3,
-                'result' : this.includes(this.arrays[0], 99)
+                'result' : this.indexOf(this.arrays[0], 99)
             }
         )
 
         console.assert(
-            this.includes(this.arrays[1], 3) === -1 ,{
-                'funcao' : 'includes1',
+            this.indexOf(this.arrays[1], 3) === -1 ,{
+                'funcao' : 'indexOf1',
                 'expected' : -1,
-                'result' : this.includes(this.arrays[1],3) 
+                'result' : this.indexOf(this.arrays[1],3) 
             }
         )
 
         console.assert(
-            this.includes(this.arrays[2], 3) === 0 ,{
-                'funcao'  : 'includes2',
+            this.indexOf(this.arrays[2], 3) === 0 ,{
+                'funcao'  : 'indexOf2',
                 'expected':  0,
-                'result'  : this.includes(this.arrays[2], 3)
+                'result'  : this.indexOf(this.arrays[2], 3)
             }
         )
     },
 
 
-    includes : function replacement(array,value){
+    indexOf : function replacement(array,value){
         result = -1;
 
         for(let i = 0; i < array.length; i++){
-            if(value === array[i]){
-                    result = true;
+            if(value === array[i] && result < 0){
+                    result = i;
             }
         }
         return result
     }
 }
-    includesObj.teste()
+
+indexOfObj.teste()
+
+//CONCAT
+
+const concatObj ={
+
+    arrays : [[87,413,65,99,27],
+              [2,44,26,54,58,92],
+              [3,7,15,29,57,21],
+              ['a','b','c','d']],
+
+    teste : function testeConcat(){
+        
+        console.assert(
+            JSON.stringify(this.concat(this.arrays[0], 'a')) === JSON.stringify([87,413,65,99,27, 'a']),{
+                'funcao' : 'concat0',
+                'expected' : JSON.stringify([87,413,65,99,27,'a']),
+                'result' : JSON.stringify(this.concat(this.arrays[0], 'a'))
+            }
+        )
+
+        console.assert(
+            JSON.stringify(this.concat(this.arrays[1], this.arrays[3])) === JSON.stringify([2,44,26,54,58,92,'a','b','c','d']),{
+                'funcao' : 'concat1',
+                'expected' : JSON.stringify([2,44,26,54,58,92,'a','b','c','d']),
+                'result' : JSON.stringify(this.concat(this.arrays[1],this.arrays[3])) 
+            }
+        )
+
+        console.assert(
+            JSON.stringify(this.concat(this.arrays[1], this.arrays[2], this.arrays[3])) === JSON.stringify([2,44,26,54,58,92,3,7,15,29,57,21,'a','b','c','d']) ,{
+                'funcao'  : 'concat2',
+                'expected':   JSON.stringify([2,44,26,54,58,92,3,7,15,29,57,21,'a','b','c','d']),
+                'result'  : JSON.stringify(this.concat(this.arrays[1], this.arrays[2], this.arrays[3]))
+            }
+        )
+    },
+
+
+    concat : function concatElements(array,value){
+        result =[];
+
+        for(let i = 0; i < arguments.length; i++){
+            result = [...result,...arguments[i]];
+            }
+        
+        return result
+    }
+}
+
+concatObj.teste()
+
+//JOIN
+
+const joinObj ={
+
+    arrays : [[87,413,65,99,27],
+              [2,44,26,54,58,92],
+              ['a','b','c','d']],
+
+    teste : function testeJoin(){
+        
+        console.assert(
+            this.join(this.arrays[0], ',') === '87,413,65,99,27',{
+                'funcao' : 'join0',
+                'expected' : '87,413,65,99,27',
+                'result' : this.join(this.arrays[0],',')
+            }
+        )
+
+        console.assert(
+            this.join(this.arrays[1], 2) === 'O separador não é uma string',{
+                'funcao' : 'join1',
+                'expected' :'O separador não é uma string',
+                'result' : this.join(this.arrays[1],this.arrays[3]) 
+            }
+        )
+
+        console.assert(
+            this.join(this.arrays[2], '/') === 'a/b/c/d' ,{
+                'funcao'  : 'join2',
+                'expected':  'a/b/c/d',
+                'result'  : this.join(this.arrays[2],'/')
+            }
+        )
+    },
+
+
+    join : function concatElements(array, separator){
+        result ='';
+
+        if(typeof separator === 'string'){
+
+            for(let i = 0; i < array.length; i++){
+
+                if(i === array.length - 1){
+                    result += array[i]
+                }else{
+                    result += array[i] + separator
+                }
+                         
+        }
+        return result  
+    }else{
+        return 'O separador não é uma string'
+    }
+}
+}
+joinObj.teste()
